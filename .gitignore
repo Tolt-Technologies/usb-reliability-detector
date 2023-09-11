@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/usb-reliability-detector/FileContentIndex
+/.vs/usb-reliability-detector/v17
+/bin/Debug
+/obj/Debug
