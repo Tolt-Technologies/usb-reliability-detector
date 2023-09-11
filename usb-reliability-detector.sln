@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34004.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "usb-reliability-detector", "usb-reliability-detector.csproj", "{E7434E1C-FA01-4527-9E9C-B00256252B8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsbDevicesDotNet", "UsbDevicesDotNet\UsbDevicesDotNet.csproj", "{8D716417-07DD-40A6-8229-CD523E3ADF99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7434E1C-FA01-4527-9E9C-B00256252B8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7434E1C-FA01-4527-9E9C-B00256252B8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7434E1C-FA01-4527-9E9C-B00256252B8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7434E1C-FA01-4527-9E9C-B00256252B8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D716417-07DD-40A6-8229-CD523E3ADF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D716417-07DD-40A6-8229-CD523E3ADF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D716417-07DD-40A6-8229-CD523E3ADF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D716417-07DD-40A6-8229-CD523E3ADF99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5D48891B-F95B-44AC-A3C9-EE2F5105C1DD}
+	EndGlobalSection
+EndGlobal
