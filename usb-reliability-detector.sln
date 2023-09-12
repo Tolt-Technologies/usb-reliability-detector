@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34004.107
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "usb-reliability-detector", "usb-reliability-detector.csproj", "{E7434E1C-FA01-4527-9E9C-B00256252B8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToltTech.USBReliabilityDetector", "ToltTech.USBReliabilityDetector.csproj", "{E7434E1C-FA01-4527-9E9C-B00256252B8B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsbDevicesDotNet", "UsbDevicesDotNet\UsbDevicesDotNet.csproj", "{8D716417-07DD-40A6-8229-CD523E3ADF99}"
 EndProject
