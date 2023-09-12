@@ -14,26 +14,28 @@
 
         public MessageOnlyWindow()
         {
-            this.WindowHandle = IntPtr.Zero;
+            WindowHandle = IntPtr.Zero;
         }
 
         public void Dispose()
         {
-            this.DestroyWindow();
+            DestroyWindow();
         }
 
         public Boolean CreateWindow(String className = "VurdalakovMessageOnlyWindow")
         {
             // intentionally here, prevents garbage collection
-            this.windowProc = this.OnWindowProc;
+            windowProc = OnWindowProc;
 
-            this.hInstance = GetModuleHandle(null);
+            hInstance = GetModuleHandle(null);
 
-            WNDCLASSEX wndClassEx = new WNDCLASSEX();
-            wndClassEx.cbSize = Marshal.SizeOf(typeof(WNDCLASSEX));
-            wndClassEx.lpfnWndProc = this.windowProc;
-            wndClassEx.hInstance = this.hInstance;
-            wndClassEx.lpszClassName = className;
+            WNDCLASSEX wndClassEx = new WNDCLASSEX
+            {
+                cbSize = Marshal.SizeOf(typeof(WNDCLASSEX)),
+                lpfnWndProc = windowProc,
+                hInstance = hInstance,
+                lpszClassName = className
+            };
 
             UInt16 atom = RegisterClassEx(ref wndClassEx);
             if (0 == atom)
@@ -42,10 +44,10 @@
                 return false;
             }
 
-            this.classAtom = new IntPtr(atom);
+            classAtom = new IntPtr(atom);
 
-            this.WindowHandle = CreateWindowEx(0, this.classAtom, IntPtr.Zero, 0, 0, 0, 0, 0, new IntPtr(HWND_MESSAGE), IntPtr.Zero, this.hInstance, IntPtr.Zero);
-            if (IntPtr.Zero == this.WindowHandle)
+            WindowHandle = CreateWindowEx(0, classAtom, IntPtr.Zero, 0, 0, 0, 0, 0, new IntPtr(HWND_MESSAGE), IntPtr.Zero, hInstance, IntPtr.Zero);
+            if (IntPtr.Zero == WindowHandle)
             {
                 Tracer.Trace("CreateWindowEx failed with error {0}", Marshal.GetLastWin32Error());
                 return false;
@@ -56,19 +58,19 @@
 
         public void DestroyWindow()
         {
-            if (this.WindowHandle != IntPtr.Zero)
+            if (WindowHandle != IntPtr.Zero)
             {
-                if (!DestroyWindow(this.WindowHandle))
+                if (!DestroyWindow(WindowHandle))
                 {
                     Tracer.Trace("DestroyWindow failed with error {0}", Marshal.GetLastWin32Error());
                 }
 
-                this.WindowHandle = IntPtr.Zero;
+                WindowHandle = IntPtr.Zero;
             }
 
-            if (this.classAtom != IntPtr.Zero)
+            if (classAtom != IntPtr.Zero)
             {
-                if (!UnregisterClass(this.classAtom, this.hInstance))
+                if (!UnregisterClass(classAtom, hInstance))
                 {
                     Tracer.Trace("UnregisterClass failed with error {0}", Marshal.GetLastWin32Error());
                 }

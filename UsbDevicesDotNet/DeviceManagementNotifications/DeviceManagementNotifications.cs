@@ -79,17 +79,11 @@
 
             if (DBT_DEVICEARRIVAL == eventType)
             {
-                if (this.DeviceConnected != null)
-                {
-                    this.DeviceConnected(this, new DeviceManagementNotificationsEventArgs(true, dbi.dbcc_classguid, dbi.dbcc_name));
-                }
+                DeviceConnected?.Invoke(this, new DeviceManagementNotificationsEventArgs(true, dbi.dbcc_classguid, dbi.dbcc_name));
             }
             else if (DBT_DEVICEREMOVECOMPLETE == eventType)
             {
-                if (this.DeviceDisconnected != null)
-                {
-                    this.DeviceDisconnected(this, new DeviceManagementNotificationsEventArgs(false, dbi.dbcc_classguid, dbi.dbcc_name));
-                }
+                DeviceDisconnected?.Invoke(this, new DeviceManagementNotificationsEventArgs(false, dbi.dbcc_classguid, dbi.dbcc_name));
             }
         }
 

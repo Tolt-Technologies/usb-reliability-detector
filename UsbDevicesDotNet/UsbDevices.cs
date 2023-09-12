@@ -7,7 +7,7 @@
     internal class UsbDevices : UsbDeviceBase, IDisposable
     {
         private Guid classGuid;
-        private IntPtr handle;
+        private readonly IntPtr handle;
 
         public UsbDevices(Guid classGuid)
         {

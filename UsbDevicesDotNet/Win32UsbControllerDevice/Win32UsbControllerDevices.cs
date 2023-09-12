@@ -84,10 +84,7 @@
                     return;
                 }
 
-                if (this.DeviceConnected != null)
-                {
-                    this.DeviceConnected(this, new Win32UsbControllerDeviceEventArgs(win32UsbControllerDevice));
-                }
+                DeviceConnected?.Invoke(this, new Win32UsbControllerDeviceEventArgs(win32UsbControllerDevice));
             }
             catch (Exception ex)
             {
@@ -110,10 +107,7 @@
                     return;
                 }
 
-                if (this.DeviceDisconnected != null)
-                {
-                    this.DeviceDisconnected(this, new Win32UsbControllerDeviceEventArgs(win32UsbControllerDevice));
-                }
+                DeviceDisconnected?.Invoke(this, new Win32UsbControllerDeviceEventArgs(win32UsbControllerDevice));
             }
             catch (Exception ex)
             {
@@ -138,7 +132,7 @@
 
                 if (this.DeviceModified != null)
                 {
-                    this.DeviceModified(this, new Win32UsbControllerDeviceEventArgs(win32UsbControllerDevice));
+                    DeviceModified(this, new Win32UsbControllerDeviceEventArgs(win32UsbControllerDevice));
                 }
             }
             catch (Exception ex)

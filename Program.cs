@@ -12,7 +12,7 @@ namespace usb_reliability_detector
     {
         private static Logger Logger;
 
-        static void Main(string[] args)
+        static void Main()
         {
             var consoleTarget = new ColoredConsoleTarget
             {
