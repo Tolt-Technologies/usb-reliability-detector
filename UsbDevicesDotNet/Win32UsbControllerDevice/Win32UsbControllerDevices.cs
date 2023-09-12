@@ -158,18 +158,14 @@
                     String dependent = managementObject.GetPropertyValue("Dependent").ToString();
                     win32UsbControllerDevice.DeviceId = this.ExtractSeviceId(dependent);
                 }
-                catch (Exception ex)
-                {
-                }
+                catch { }
 
                 try
                 {
                     String antecedent = managementObject.GetPropertyValue("Antecedent").ToString();
                     win32UsbControllerDevice.ControllerId = this.ExtractSeviceId(antecedent);
                 }
-                catch (Exception ex)
-                {
-                }
+                catch { }
 
                 try
                 {
@@ -186,9 +182,7 @@
                     win32UsbControllerDevice.Hub = locationInformation.Substring(hubIndex + 5, 4);
                     win32UsbControllerDevice.Port = locationInformation.Substring(portIndex + 6, 4);
                 }
-                catch (Exception ex)
-                {
-                }
+                catch { }
 
                 try
                 {
@@ -203,15 +197,11 @@
                     win32UsbControllerDevice.Vid = win32UsbControllerDevice.DeviceId.Substring(vidIndex + 4, 4);
                     win32UsbControllerDevice.Pid = win32UsbControllerDevice.DeviceId.Substring(pidIndex + 4, 4);
                 }
-                catch (Exception ex)
-                {
-                }
+                catch { }
 
                 return win32UsbControllerDevice;
             }
-            catch (Exception ex)
-            {
-            }
+            catch { }
 
             return null;
         }
