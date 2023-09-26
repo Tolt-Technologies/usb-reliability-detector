@@ -1,6 +1,0 @@
-[submodule "external/tt-telemetry"]
-	path = external/tt-telemetry
-	url = git@gitlab.com:tolttech/libraries/tt-telemetry.git
-[submodule "external/NLog.Targets.Syslog"]
-	path = external/NLog.Targets.Syslog
-	url = git@github.com:JayToltTech/NLog.Targets.Syslog.git

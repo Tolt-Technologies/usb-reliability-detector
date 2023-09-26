@@ -7,12 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToltTech.USBReliabilityDete
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsbDevicesDotNet", "UsbDevicesDotNet\UsbDevicesDotNet.csproj", "{8D716417-07DD-40A6-8229-CD523E3ADF99}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{9C49E10A-6279-403D-87F3-BCAE6D15D335}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToltTech.Telemetry", "external\tt-telemetry\ToltTech.Telemetry\ToltTech.Telemetry.csproj", "{916CB674-67ED-4DB8-B1D7-06460B66AAAB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog.Targets.Syslog", "external\NLog.Targets.Syslog\src\NLog.Targets.Syslog\NLog.Targets.Syslog.csproj", "{801BD17E-ABDE-409C-9B52-E0C061970C9F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,21 +21,9 @@ Global
 		{8D716417-07DD-40A6-8229-CD523E3ADF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D716417-07DD-40A6-8229-CD523E3ADF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D716417-07DD-40A6-8229-CD523E3ADF99}.Release|Any CPU.Build.0 = Release|Any CPU
-		{916CB674-67ED-4DB8-B1D7-06460B66AAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{916CB674-67ED-4DB8-B1D7-06460B66AAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{916CB674-67ED-4DB8-B1D7-06460B66AAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{916CB674-67ED-4DB8-B1D7-06460B66AAAB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{801BD17E-ABDE-409C-9B52-E0C061970C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{801BD17E-ABDE-409C-9B52-E0C061970C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{801BD17E-ABDE-409C-9B52-E0C061970C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{801BD17E-ABDE-409C-9B52-E0C061970C9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{916CB674-67ED-4DB8-B1D7-06460B66AAAB} = {9C49E10A-6279-403D-87F3-BCAE6D15D335}
-		{801BD17E-ABDE-409C-9B52-E0C061970C9F} = {9C49E10A-6279-403D-87F3-BCAE6D15D335}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D48891B-F95B-44AC-A3C9-EE2F5105C1DD}
